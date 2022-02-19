@@ -37,7 +37,7 @@ def get_block_cost(block_num):
     block_cost = 0
 
     for tx in arrayTxs:
-        block_cost = block_cost + (get_transaction_cost(tx)/1000000000000000000)
+        block_cost = block_cost + (get_transaction_cost(tx))
 
 #    print("Block cost: ", block_cost)
     return block_cost
@@ -55,8 +55,8 @@ def get_most_expensive_transaction(block_num):
             maxTrx = tx_cost
             tx_hash = tx
 
-    print("Hash: ", tx_hash.hex())
-    print("Max cost: ", maxTrx)
+#    print("Hash: ", tx_hash.hex())
+#    print("Max cost: ", maxTrx)
 
 #    max_tx = HexBytes(tx_hash.hex())
 #    print("Hexbytes: ", max_tx)
@@ -72,18 +72,18 @@ def get_most_expensive_transaction(block_num):
 def main():
 
     print("Q3")
-    get_most_expensive_transaction(10237208)
 
-'''
-    blockCost = get_block_cost(10237208)
+
+
+    blockCost = get_block_cost(10237208)/1000000000000000000
     ethPrice = 248.26
     print("ETH transactions cost: ", blockCost)
     totalCost = blockCost + 2
     print("ETH total cost: ", totalCost)
     print("USD cost: ", ethPrice*totalCost)
     print("USD cost: ", round(ethPrice*totalCost))
-'''
 
+    get_most_expensive_transaction(10237208)
 
 
 '''
