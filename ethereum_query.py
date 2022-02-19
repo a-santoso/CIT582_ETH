@@ -61,7 +61,8 @@ def get_most_expensive_transaction(block_num):
 #    max_tx = HexBytes(tx_hash.hex())
 #    print("Hexbytes: ", max_tx)
 
-    max_tx = tx_hash.hex()
+#    max_tx = tx_hash.hex()
+    max_tx = tx
 
     #max_tx = HexBytes('0xf7f4905225c0fde293e2fd3476e97a9c878649dd96eb02c86b86be5b92d826b6')  #YOUR CODE HERE
     return max_tx
